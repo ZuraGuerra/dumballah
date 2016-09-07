@@ -1,4 +1,7 @@
 defmodule Dumballah.Construct do
+  def elixir_datetime({year, month, day}, {hour, minute, second}),
+    do: elixir_datetime(year, month, day, hour, minute, second)
+
   def elixir_datetime(year, month, day,
                       hour \\ 0, minute \\ 0, second \\ 0,
                       microsecond \\ {0,0}) do

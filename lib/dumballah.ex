@@ -1,8 +1,6 @@
 defmodule Dumballah do
   def now do
-    {year, month, day} = :erlang.date
-    {hours, minutes, seconds} = :erlang.time
-    Construct.elixir_datetime(year, month, day, hours, minutes, seconds)
+    Construct.elixir_datetime(:erlang.date, :erlang.time)
     |> DateTime.to_unix
   end
 
