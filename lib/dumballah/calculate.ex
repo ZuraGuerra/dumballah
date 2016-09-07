@@ -18,6 +18,6 @@ defmodule Dumballah.Calculate do
 
   def seconds_until_midnight({hours, minutes, seconds}) do
     time = seconds |> add_time(:minutes, minutes) |> add_time(:hours, hours)
-    Convert.to_seconds(:days) - time
+    Convert.to_seconds(:days, 1) - time
   end
 end
