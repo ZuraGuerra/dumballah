@@ -1,7 +1,11 @@
 defmodule Dumballah do
   def now do
-    {megaseconds, seconds, _} = :os.system_time
-    (megaseconds * 1000000) + seconds
+    {year, month, day} = :erlang.date
+    {hours, minutes, seconds} = :erlang.time
+    %DateTime{calendar: Calendar.ISO, day: day, hour: hours, microsecond: {0, 0},
+              minute: minutes, month: month, second: seconds, std_offset: 0,
+              time_zone: "Etc/UTC", utc_offset: 0, year: year, zone_abbr: "UTC"}
+    |> DateTime.to_unix
   end
 
   def unix_epoch,
