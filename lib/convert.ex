@@ -10,7 +10,11 @@ defmodule Dumballah.Convert do
   defdelegate from_unix(date), to: DateTime, as: :from_unix!
 
   def to_seconds(number), do: to_seconds(:minutes, number)
-  def to_seconds(:minutes, number \\ 1), do: @minute_in_seconds * number
-  def to_seconds(:hours, number \\ 1), do: @hour_in_seconds * number
-  def to_seconds(:days, number \\ 1), do: @day_in_seconds * number
+  def to_seconds(:minutes, multiplier \\ 1), do: @minute_in_seconds * multiplier
+  def to_seconds(:hours, multiplier \\ 1), do: @hour_in_seconds * multiplier
+  def to_seconds(:days, multiplier \\ 1), do: @day_in_seconds * multiplier
+
+  def from_seconds(:minutes, seconds), do: seconds / @minute_in_seconds
+  def from_seconds(:hours, seconds), do: seconds / @hour_in_seconds
+  def from_seconds(:days, seconds), do: seconds / @day_in_seconds
 end
