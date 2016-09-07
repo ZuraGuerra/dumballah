@@ -43,7 +43,7 @@ defmodule Dumballah.Mixfile do
   defp package do
     [
       maintainers: ["Zura Guerra", "Steed"],
-      licenses: "GNU GPLv3",
+      licenses: ["GNU GPLv3"],
       links: %{
         "GitHub" => "https://github.com/ZuraGuerra/dumballah"
       }
