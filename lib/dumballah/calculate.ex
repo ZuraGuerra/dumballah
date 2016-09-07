@@ -15,4 +15,9 @@ defmodule Dumballah.Calculate do
               time_zone: "Etc/UTC", utc_offset: 0, year: year, zone_abbr: "UTC"}
     |> DateTime.to_unix
   end
+
+  def seconds_until_midnight({hours, minutes, seconds}) do
+    time = seconds |> add_time(:minutes, minutes) |> add_time(:hours, hours)
+    Convert.to_seconds(:days) - time
+  end
 end
