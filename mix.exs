@@ -3,7 +3,7 @@ defmodule Dumballah.Mixfile do
 
   def project do
     [app: :dumballah,
-     version: "0.1.0",
+     version: "1.0.0",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -28,5 +28,21 @@ defmodule Dumballah.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     []
+  end
+
+  defp description do
+    """
+    Elixir library to manipulate Unix timestamps.
+    """
+  end
+
+  defp package do
+    [
+      maintainers: ["Zura Guerra", "Steed"],
+      licenses: "GNU GPLv3",
+      links: %{
+        "GitHub" => "https://github.com/ZuraGuerra/dumballah"
+      }
+    ]
   end
 end
