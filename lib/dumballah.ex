@@ -1,4 +1,6 @@
 defmodule Dumballah do
+  alias Dumballah.Construct
+  
   def now do
     Construct.elixir_datetime(:erlang.date, :erlang.time)
     |> DateTime.to_unix
