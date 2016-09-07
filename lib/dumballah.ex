@@ -2,9 +2,7 @@ defmodule Dumballah do
   def now do
     {year, month, day} = :erlang.date
     {hours, minutes, seconds} = :erlang.time
-    %DateTime{calendar: Calendar.ISO, day: day, hour: hours, microsecond: {0, 0},
-              minute: minutes, month: month, second: seconds, std_offset: 0,
-              time_zone: "Etc/UTC", utc_offset: 0, year: year, zone_abbr: "UTC"}
+    Construct.elixir_datetime(year, month, day, hours, minutes, seconds)
     |> DateTime.to_unix
   end
 
