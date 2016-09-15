@@ -63,3 +63,9 @@ Working with date times is a [real](http://infiniteundo.com/post/25326999628/fal
 [`time/0` docs](http://erlang.org/doc/man/erlang.html#time-0)
 
 [Time Correction in Erlang](http://erlang.org/doc/apps/erts/time_correction.html)
+
+---
+
+Maintained by [steed.](http://steed.mx/)
+
+![steed.](https://avatars1.githubusercontent.com/u/20601055?v=3&s=200)
