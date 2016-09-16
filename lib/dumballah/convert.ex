@@ -1,6 +1,8 @@
 defmodule Dumballah.Convert do
-  # It's dangerous to go alone, take this:
-  # http://erlang.org/doc/man/calendar.html
+  @moduledoc """
+  Provides functions to perform conversions between
+  seconds and other time units (minutes, hours and days).
+  """
 
   @minute_in_seconds :calendar.time_to_seconds({0, 1, 0})
   @hour_in_seconds :calendar.time_to_seconds({1, 0, 0})
@@ -9,11 +11,36 @@ defmodule Dumballah.Convert do
   defdelegate to_unix(date), to: DateTime, as: :to_unix
   defdelegate from_unix(date), to: DateTime, as: :from_unix!
 
+  @doc """
+  Convert minutes to seconds.
+
+  ## Examples
+      iex> Dumballah.Convert.to_seconds(3)
+      180
+  """
+  @spec to_seconds(integer) :: integer
   def to_seconds(number), do: to_seconds(:minutes, number)
+
+  @doc """
+  Convert `:minutes`, `:hours` and `:days` to seconds.
+
+  ## Examples
+      iex> Dumballah.Convert.to_seconds(:hours, 7)
+      25200
+  """
+  @spec to_seconds(atom, integer) :: integer
   def to_seconds(:minutes, multiplier), do: @minute_in_seconds * multiplier
   def to_seconds(:hours, multiplier), do: @hour_in_seconds * multiplier
   def to_seconds(:days, multiplier), do: @day_in_seconds * multiplier
 
+  @doc """
+  Convert seconds to `:minutes`, `:hours` and `:days`.
+
+  ## Examples
+      iex> Dumballah.Convert.from_seconds(:hours, 25200)
+      7.0
+  """
+  @spec from_seconds(atom, integer) :: float
   def from_seconds(:minutes, seconds), do: seconds / @minute_in_seconds
   def from_seconds(:hours, seconds), do: seconds / @hour_in_seconds
   def from_seconds(:days, seconds), do: seconds / @day_in_seconds
