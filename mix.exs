@@ -4,6 +4,8 @@ defmodule Dumballah.Mixfile do
   def project do
     [app: :dumballah,
      version: "1.3.0",
+     name: "Dumballah",
+     source_url: "https://github.com/ZuraGuerra/dumballah",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
