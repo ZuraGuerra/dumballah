@@ -7,6 +7,8 @@
 
 Dumballah is a tiny library that provides conversions between seconds and other time units, and some useful calculations to make easier the manipulation of Unix timestamps.
 
+Here is the [documentation](https://hexdocs.pm/dumballah/api-reference.html).
+
 ## Requirements
 
 Elixir 1.3+.
