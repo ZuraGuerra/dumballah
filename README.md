@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ZuraGuerra/dumballah.svg?branch=master)](https://travis-ci.org/ZuraGuerra/dumballah)
 [![Inline docs](http://inch-ci.org/github/ZuraGuerra/dumballah.svg)](http://inch-ci.org/github/ZuraGuerra/dumballah)
+[![Deps Status](https://beta.hexfaktor.org/badge/all/github/ZuraGuerra/dumballah.svg)](https://beta.hexfaktor.org/github/ZuraGuerra/dumballah)
 [![Hex version](https://img.shields.io/hexpm/v/dumballah.svg)](https://hex.pm/packages/dumballah)
 
 Dumballah is a tiny library that provides conversions between seconds and other time units, and some useful calculations to make easier the manipulation of Unix timestamps.
