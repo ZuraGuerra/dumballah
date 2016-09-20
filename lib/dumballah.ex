@@ -14,7 +14,7 @@ defmodule Dumballah do
       iex> Dumballah.now
       1474321894
   """
-  @spec now() :: integer
+  @spec now() :: timestamp :: integer
   def now do
     Construct.elixir_datetime(:erlang.date, :erlang.time)
     |> DateTime.to_unix
@@ -27,7 +27,7 @@ defmodule Dumballah do
       iex> Dumballah.unix_epoch
       62167219200
   """
-  @spec unix_epoch() :: integer
+  @spec unix_epoch() :: timestamp :: integer
   def unix_epoch,
     do: :calendar.datetime_to_gregorian_seconds({{1970,1,1},{0,0,0}})
 end

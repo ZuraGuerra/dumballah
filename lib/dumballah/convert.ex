@@ -18,7 +18,7 @@ defmodule Dumballah.Convert do
       iex> Dumballah.Convert.to_seconds(3)
       180
   """
-  @spec to_seconds(integer) :: integer
+  @spec to_seconds(minutes :: integer) :: seconds :: integer
   def to_seconds(number), do: to_seconds(:minutes, number)
 
   @doc """
@@ -28,7 +28,7 @@ defmodule Dumballah.Convert do
       iex> Dumballah.Convert.to_seconds(:hours, 7)
       25200
   """
-  @spec to_seconds(atom, integer) :: integer
+  @spec to_seconds(unit :: atom, multiplier :: integer) :: seconds :: integer
   def to_seconds(:minutes, multiplier), do: @minute_in_seconds * multiplier
   def to_seconds(:hours, multiplier), do: @hour_in_seconds * multiplier
   def to_seconds(:days, multiplier), do: @day_in_seconds * multiplier
@@ -40,7 +40,7 @@ defmodule Dumballah.Convert do
       iex> Dumballah.Convert.from_seconds(:hours, 25200)
       7.0
   """
-  @spec from_seconds(atom, integer) :: float
+  @spec from_seconds(unit :: atom, multiplier :: integer) :: result :: float
   def from_seconds(:minutes, seconds), do: seconds / @minute_in_seconds
   def from_seconds(:hours, seconds), do: seconds / @hour_in_seconds
   def from_seconds(:days, seconds), do: seconds / @day_in_seconds
