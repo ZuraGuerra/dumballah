@@ -6,6 +6,10 @@
 
 Dumballah is a tiny library that provides conversions between seconds and other time units, and some useful calculations to make easier the manipulation of Unix timestamps.
 
+## Requirements
+
+Elixir 1.3+.
+
 ## Installation
 
 Just add it to your `mix.exs` file:
@@ -67,6 +71,6 @@ Working with date times is a [real](http://infiniteundo.com/post/25326999628/fal
 
 ---
 
-Maintained by [steed.](http://steed.mx/)
+Sponsored by [steed.](http://steed.mx/)
 
 ![steed.](https://avatars1.githubusercontent.com/u/20601055?v=3&s=200)
