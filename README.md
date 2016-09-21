@@ -5,7 +5,14 @@
 [![Deps Status](https://beta.hexfaktor.org/badge/all/github/ZuraGuerra/dumballah.svg)](https://beta.hexfaktor.org/github/ZuraGuerra/dumballah)
 [![Hex version](https://img.shields.io/hexpm/v/dumballah.svg)](https://hex.pm/packages/dumballah)
 
+<center>
+![Dumballah](http://snakespirit.webs.com/damballa4.jpg)
+</center>
+---
+
 Dumballah is a tiny library that provides conversions between seconds and other time units, and some useful calculations to make easier the manipulation of Unix timestamps.
+
+Dumballah is a voodoo Loa associated with the rain and the crops, that's why I chose his name for a library about time.
 
 Here is the [documentation](https://hexdocs.pm/dumballah/api-reference.html).
 
@@ -50,7 +57,7 @@ Dumballah.now
 
 Identify passed timestamps.
 ```elixir
-Dumballa.now
+Dumballah.now
 |> Dumballah.Calculate.has_passed?
 > true
 ```
