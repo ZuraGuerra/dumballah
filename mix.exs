@@ -39,7 +39,7 @@ defmodule Dumballah.Mixfile do
 
   defp description do
     """
-    Elixir library to manipulate Unix timestamps.
+    Elixir library to manipulate Unix timestamps, named after a voodoo Loa.
     """
   end
 
