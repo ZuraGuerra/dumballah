@@ -17,14 +17,14 @@ defmodule Dumballah.Calculate do
     do: current + Convert.to_seconds(unit, multiplier)
 
   @doc """
-  Substract `:days`, `:hours` and `:minutes` from a given timestamp.
+  Subtract `:days`, `:hours` and `:minutes` from a given timestamp.
 
   ## Examples
-      iex> Dumballah.Calculate.substract_time(1474320734, :days, 1)
+      iex> Dumballah.Calculate.subtract_time(1474320734, :days, 1)
       1474234334
   """
-  @spec substract_time(timestamp :: integer, unit :: atom, multiplier :: integer) :: timestamp :: integer
-  def substract_time(current, unit, multiplier),
+  @spec subtract_time(timestamp :: integer, unit :: atom, multiplier :: integer) :: timestamp :: integer
+  def subtract_time(current, unit, multiplier),
     do: current - Convert.to_seconds(unit, multiplier)
 
   @doc """
