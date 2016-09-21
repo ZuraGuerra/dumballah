@@ -48,7 +48,7 @@ Dumballah.Convert.from_seconds(:hours, 25200)
 
 ### Calculations
 
-Add and substract `:hours`, `:days` and `:minutes` in seconds.
+Add and subtract `:hours`, `:days` and `:minutes` in seconds.
 ```elixir
 Dumballah.now
 |> Dumballah.Calculate.add_time(:days, 1)
