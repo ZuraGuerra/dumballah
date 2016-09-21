@@ -26,7 +26,7 @@ Just add it to your `mix.exs` file:
 
 ```elixir
 defp deps do
-  [{:dumballah, "~> 1.3"}]
+  [{:dumballah, "~> 2.3"}]
 end
 ```
 
